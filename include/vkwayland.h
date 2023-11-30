@@ -1,5 +1,5 @@
-#ifndef INCLUDEGUARD_VKWAYLAND_VKWAYLANDH
-#define INCLUDEGUARD_VKWAYLAND_VKWAYLANDH
+#ifndef INCLUDEGUARD_VKWAYLAND
+#define INCLUDEGUARD_VKWAYLAND
 
 #include <vulkan/vulkan.h>
 #include <wayland-client.h>

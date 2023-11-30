@@ -1,11 +1,9 @@
 #include <wayland-client.h>
-#include <assert.h>
 #include <vulkan/vulkan.h>
 #include <vulkan/vulkan_wayland.h>
 
 #include "../include/vkwayland.h"
-#include "../../vkstatic/include/vkstatic.h"
-#include "../../vkhelper/include/instance.h"
+#include "../../vkhelper/include/vkhelper.h"
 
 VkSurfaceKHR vkwayland_surface(
 	VkInstance instance,
