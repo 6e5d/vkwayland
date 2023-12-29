@@ -5,10 +5,10 @@
 #include "../include/vkwayland.h"
 #include "../../vkhelper/include/vkhelper.h"
 
-VkSurfaceKHR vkwayland_surface(
+VkSurfaceKHR vkwayland(surface)(
 	VkInstance instance,
-	struct wl_display* display,
-	struct wl_surface* surface
+	struct WlDisplay* display,
+	struct WlSurface* surface
 ) {
 	VkSurfaceKHR vksurface;
 	VkWaylandSurfaceCreateInfoKHR createInfo = {
@@ -21,12 +21,12 @@ VkSurfaceKHR vkwayland_surface(
 	return vksurface;
 }
 
-void vkwayland_new(
-	Vkstatic* vks,
-	struct wl_display* display,
-	struct wl_surface* wsur
+void vkwayland(new)(
+	Vkstatic()* vks,
+	struct WlDisplay* display,
+	struct WlSurface* wsur
 ) {
-	VkInstance instance = vkhelper_instance();
-	VkSurfaceKHR vsur = vkwayland_surface(instance, display, wsur);
-	vkstatic_init(vks, instance, vsur);
+	VkInstance instance = vkhelper(instance)();
+	VkSurfaceKHR vsur = vkwayland(surface)(instance, display, wsur);
+	vkstatic(init)(vks, instance, vsur);
 }

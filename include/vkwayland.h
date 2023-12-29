@@ -4,18 +4,20 @@
 #include <vulkan/vulkan.h>
 #include <wayland-client.h>
 
-#include "../../vkstatic/include/vkstatic.h"
+#include "../../vkstatic/build/vkstatic.h"
+#define WlDisplay wl_display
+#define WlSurface wl_surface
 
-VkSurfaceKHR vkwayland_surface(
-VkInstance instance,
-struct wl_display* display,
-struct wl_surface* surface
+VkSurfaceKHR vkwayland(surface)(
+	VkInstance instance,
+	struct WlDisplay* display,
+	struct WlSurface* surface
 );
 
-void vkwayland_new(
-Vkstatic* vks,
-struct wl_display* display,
-struct wl_surface* wsur
+void vkwayland(new)(
+	Vkstatic()* vks,
+	struct WlDisplay* display,
+	struct WlSurface* wsur
 );
 
 #endif
