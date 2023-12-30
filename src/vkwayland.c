@@ -7,8 +7,8 @@
 
 VkSurfaceKHR vkwayland(surface)(
 	VkInstance instance,
-	struct WlDisplay* display,
-	struct WlSurface* surface
+	struct wl_display* display,
+	struct wl_surface* surface
 ) {
 	VkSurfaceKHR vksurface;
 	VkWaylandSurfaceCreateInfoKHR createInfo = {
@@ -23,8 +23,8 @@ VkSurfaceKHR vkwayland(surface)(
 
 void vkwayland(new)(
 	Vkstatic()* vks,
-	struct WlDisplay* display,
-	struct WlSurface* wsur
+	struct wl_display* display,
+	struct wl_surface* wsur
 ) {
 	VkInstance instance = vkhelper(instance)();
 	VkSurfaceKHR vsur = vkwayland(surface)(instance, display, wsur);
